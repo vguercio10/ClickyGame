@@ -1,6 +1,7 @@
 import React from "react";
 import Characters from "./../characters.json";
-import Card from "./card";
+import Card from "./card/card";
+
 
 class ClickyGame extends React.Component {
 state = {
@@ -38,7 +39,7 @@ state = {
         </nav>
         <br></br>
     <div>
-        <header className="header text-center">
+        <header className="header bg-secondary text-center text-white">
         <h4>Princess Memory Game</h4>
         <h4>Click on a picture to earn 1 point! Do not click a picture more than once!</h4>
         </header>
