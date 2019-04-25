@@ -36,7 +36,14 @@ state = {
           <span className="navbar-center">{this.state.userGuess} </span>
           <span className="navbar-right">Score: {this.state.score} | Top Score: </span>
         </nav>
-
+        <br></br>
+    <div>
+        <header className="header text-center">
+        <h4>Princess Memory Game</h4>
+        <h4>Click on a picture to earn 1 point! Do not click a picture more than once!</h4>
+        </header>
+    </div>
+    <br></br>
         <div className="container">
           <div className="row">
             {this.state.characters.map(element => {
