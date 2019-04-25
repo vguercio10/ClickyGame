@@ -29,9 +29,9 @@ state = {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-light bg-info">
-          <a className="navbar-brand" href="/">
-            Clicky Game
+        <nav className="navbar navbar-light bg-info text-white">
+          <a className="navbar-brand text-white" href="/">
+            Princess Memory Game
           </a>
           <span className="navbar-center">{this.state.userGuess} </span>
           <span className="navbar-right">Score: {this.state.score} | Top Score: </span>
