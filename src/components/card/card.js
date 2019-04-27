@@ -1,6 +1,7 @@
 import React from "react";
 import "./stylecard.css";
 
+
 function Card(props) {
 
     return (
