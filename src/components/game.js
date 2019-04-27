@@ -8,7 +8,8 @@ state = {
     characters: Characters,
     clickedId: [],
     userGuess: "Click an Image To Begin",
-    score: 0
+    score: 0,
+    topScore: 0
 }
 
   imageClicked = id => {
@@ -18,12 +19,15 @@ state = {
           this.setState({
               clickedId: trackedClicks,
               userGuess: "You guessed correctly",
-              score: this.state.score + 1
-            })
+              score: this.state.score + 1,
+              topScore: this.state.topScore + 1
+            });
       } else {
         this.setState({
             userGuess: "You guessed incorrectly",
-            score: 0
+            score: 0,
+            topScore: this.state.topScore
+            
         })
       }
     console.log(id);
@@ -36,7 +40,7 @@ state = {
             Princess Memory Game
           </a>
           <span className="navbar-center">{this.state.userGuess} </span>
-          <span className="navbar-right">Score: {this.state.score} | Top Score: </span>
+          <span className="navbar-right">Score: {this.state.score} | Top Score: {this.state.topScore} </span>
         </nav>
         <br></br>
     <div>
