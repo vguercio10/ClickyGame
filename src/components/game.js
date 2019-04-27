@@ -1,6 +1,7 @@
 import React from "react";
 import Characters from "./../characters.json";
 import Card from "./card/card";
+import "./card/stylecard.css"
 
 
 class ClickyGame extends React.Component {
@@ -26,11 +27,11 @@ state = {
         this.setState({
             userGuess: "You guessed incorrectly",
             score: 0,
-            topScore: this.state.topScore
-            
-        })
+            topScore: this.state.topScore,
+
+        }) 
       }
-    console.log(id);
+    // console.log(id);
   };
   render() {
     return (
@@ -56,6 +57,7 @@ state = {
             {this.state.characters.map(element => {
               return (
                 <Card
+                  key={element.id}
                   imageUrl={element.image}
                   clickImage={() => this.imageClicked(element.id)}
                 />

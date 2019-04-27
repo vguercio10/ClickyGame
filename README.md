@@ -1,3 +1,22 @@
+# Princess Memory Game 
+
+## Overview
+
+### This is a memory game built using React. 
+
+1. The app should render 12 images to the screen.
+2. Click an image to begin.
+3. Each image listens for a click event then keeps track of which images are clicked.
+4. When clicked you earn a point. After clicking the same image twice your score will return to zero. The top score is the number of clicks before clicking the same image twice.
+
+### Technologies Used
+* React
+* Bootstrap
+* CSS
+
+### Play Game [Here][1] 
+[1]:https://vguercio10.github.io/ClickyGame/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
