@@ -10,6 +10,7 @@ state = {
     userGuess: "Click an Image To Begin",
     score: 0
 }
+
   imageClicked = id => {
     var trackedClicks = this.state.clickedId  
     if (trackedClicks.indexOf(id) === -1) {
@@ -46,6 +47,7 @@ state = {
     </div>
     <br></br>
         <div className="container">
+        <br></br>
           <div className="row">
             {this.state.characters.map(element => {
               return (
@@ -56,6 +58,7 @@ state = {
               );
             })}
           </div>
+          <br></br>
         </div>
       </div>
     );
