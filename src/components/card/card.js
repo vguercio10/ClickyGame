@@ -1,6 +1,7 @@
+// importing react framwork
 import React from "react";
-// import "./stylecard.css";
 
+// Css for Card component
 const styles = {
     imgResponsive: {
         boxShadow: "-3px 18px 20px 0px rgba(99,89,99,1)",
@@ -11,6 +12,7 @@ const styles = {
     }
 }
 
+// A component (in this case this card) is a reusable function for elements that contains props(aka parameters)
 function Card(props) {
 
     return (

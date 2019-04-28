@@ -1,9 +1,9 @@
 import React from "react";
 import Characters from "./../characters.json";
 import Card from "./card/card";
-import "./card/stylecard.css"
 
 
+// The class is a component (components in react can be defined as classes or functions. Classes in react give you more features)
 class ClickyGame extends React.Component {
 state = {
     characters: Characters,
@@ -12,7 +12,7 @@ state = {
     score: 0,
     topScore: 0
 }
-
+// Function to shuffle images and then return new shuffled images
 shuffleArray = a => {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -20,10 +20,13 @@ shuffleArray = a => {
   }
 return a
 }
-
+// Logic for on click of images.
   imageClicked = id => {
+  // This takes variable holds the new shuffled images evertime picture is clicked and them sets them to display
     var newArray = this.shuffleArray (this.state.characters)
     this.setState({characters: newArray})
+    // This variable keeps track of each image clicked by their id and then updates the state of the score and top score.
+    // It also compares the ids in order to check wether the image has already been selected.
     var trackedClicks = this.state.clickedId  
     if (trackedClicks.indexOf(id) === -1) {
           trackedClicks.push(id)
@@ -33,7 +36,8 @@ return a
               score: this.state.score + 1,
               topScore: this.state.topScore + 1
             });
-      } else {
+      } else { 
+        // If the image has been clicked twice the score goes back to 0 and user is informed their guess is incorrect. Also, topscore is displayed
         this.setState({
             userGuess: "You guessed incorrectly",
             score: 0,
@@ -43,6 +47,7 @@ return a
       }
     // console.log(id);
   };
+  // Displaying the above logic to the page
   render() {
     return (
       <div>
@@ -66,6 +71,7 @@ return a
           <div className="row">
             {this.state.characters.map(element => {
               return (
+                // Card component, see card.js
                 <Card
                   key={element.id}
                   imageUrl={element.image}
@@ -80,5 +86,5 @@ return a
     );
   }
 }
-
+// exporting the class ClickyGame
 export default ClickyGame;
