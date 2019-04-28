@@ -47,7 +47,7 @@ return a
       }
     // console.log(id);
   };
-  // Displaying the above logic to the page
+  // Displaying the above logic to the page using props
   render() {
     return (
       <div>
@@ -69,6 +69,7 @@ return a
         <div className="container">
         <br></br>
           <div className="row">
+          {/* mapping over an element is like looping */}
             {this.state.characters.map(element => {
               return (
                 // Card component, see card.js

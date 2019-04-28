@@ -2,12 +2,15 @@
 
 ## Overview
 
+![princessgame](https://user-images.githubusercontent.com/47366649/56869404-44cd5e80-69ce-11e9-9744-9c1fa0b27a43.PNG)
+
 ### This is a memory game built using React. 
 
 1. The app should render 12 images to the screen.
 2. Click an image to begin.
 3. Each image listens for a click event then keeps track of which images are clicked.
 4. When clicked you earn a point. After clicking the same image twice your score will return to zero. The top score is the number of clicks before clicking the same image twice.
+5. Each time you click an image the images are shuffled.
 
 ### Technologies Used
 * React
